@@ -35,7 +35,7 @@ XPOS: manual native
 Features: converted from manual
 Relations: converted from manual
 Contributors: Þorsteinsson, Vilhjálmur; Óladóttir, Hulda; Arnardóttir, Þórunn; Þórðarson, Sveinbjörn; Símonarson, Haukur Barri; Ásgeirsdóttir, Katla
-Contributing: here
+Contributing: elsewhere
 Contact: thar@hi.is
 ===============================================================================
 </pre>
