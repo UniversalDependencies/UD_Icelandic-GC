@@ -9,7 +9,7 @@ The treebank consists of text which was extracted from news and governments site
 
 The GreynirCorpus data was split into a development set and a test set, and that split is preserved. The test set consists of 10% of the total number of sentences, chosen at random. The test set in UD_Icelandic-GC is the same. The original development set is now the training set, excluding every tenth file, which is now in the development set.
 
-The treebank consists of 99,611 tokens in total. The training set consists of 79,395 tokens, the development set of 10,694 tokens and the test set of 9,522 tokens.
+The treebank consists of 99,611 tokens in total. The training set consists of 79,395 tokens, the development set of 10,694 tokens and the test set of 10,349 tokens.
 
 
 # Acknowledgments
