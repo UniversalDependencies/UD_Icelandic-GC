@@ -1,11 +1,11 @@
 Running the following version of UD tools:
-commit e9726a6a7d6913193d90edb45a4cb549235c5b16
+commit 78ce4b21495c6e4c17a7b07925bec1267d833d14
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Sat Nov 4 17:10:55 2023 +0100
+Date:   Sun May 5 09:21:16 2024 +0200
 Evaluating the following revision of UD_Icelandic-GC:
-commit 5900ff44f2fa1139b23de856a2303ec0ce954601
+commit 5d02c99b86a91d5eb1360c0aae55ba57f00c1300
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Tue May 9 10:39:03 2023 +0200
+Date:   Mon Nov 6 12:07:56 2023 +0100
 Size: counted 99611 of 99611 words (nodes).
 Size: min(0, log((N/1000)**2)) = 9.20254520051876.
 Size: maximum value 13.815511 is for 1000000 words or more.
@@ -20,15 +20,51 @@ Features: source of annotation (from README) factor is 0.8.
 Universal relations: 29 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 0.8.
 Udapi:
-               TOTAL      12705
-Udapi: found 12705 bugs.
+               TOTAL      12689
+Udapi: found 12689 bugs.
 Udapi: worst expected case (threshold) is one bug per 10 words. There are 99611 words.
 Genres: found 1 out of 17 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang is --max-err=10 UD_Icelandic-GC/is_gc-ud-dev.conllu
+[Line 36 Sent GREYNIR_CORPUS_00039,.3 Node 6]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 35 Sent GREYNIR_CORPUS_00039,.3 Node 5]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 37 Sent GREYNIR_CORPUS_00039,.3 Node 7]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 36 Sent GREYNIR_CORPUS_00039,.3 Node 6]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 38 Sent GREYNIR_CORPUS_00039,.3 Node 8]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 36 Sent GREYNIR_CORPUS_00039,.3 Node 6]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 383 Sent GREYNIR_CORPUS_00290,.10 Node 21]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 382 Sent GREYNIR_CORPUS_00290,.10 Node 20]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5575 Sent GREYNIR_CORPUS_00140,.9 Node 4]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5574 Sent GREYNIR_CORPUS_00140,.9 Node 3]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+...suppressing further errors regarding Warning
+Warnings: 18
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang is --max-err=10 UD_Icelandic-GC/is_gc-ud-test.conllu
+[Line 1998 Sent GREYNIR_CORPUS_00113,.1 Node 14]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 1997 Sent GREYNIR_CORPUS_00113,.1 Node 13]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 1999 Sent GREYNIR_CORPUS_00113,.1 Node 15]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 1997 Sent GREYNIR_CORPUS_00113,.1 Node 13]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5177 Sent GREYNIR_CORPUS_00023,.7 Node 5]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5175 Sent GREYNIR_CORPUS_00023,.7 Node 3]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5178 Sent GREYNIR_CORPUS_00023,.7 Node 6]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5177 Sent GREYNIR_CORPUS_00023,.7 Node 5]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5179 Sent GREYNIR_CORPUS_00023,.7 Node 7]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 5177 Sent GREYNIR_CORPUS_00023,.7 Node 5]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+...suppressing further errors regarding Warning
+Warnings: 16
 *** PASSED ***
 /net/work/people/zeman/unidep/tools/validate.py --lang is --max-err=10 UD_Icelandic-GC/is_gc-ud-train.conllu
+[Line 3899 Sent GREYNIR_CORPUS_00494,.6 Node 26]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3898 Sent GREYNIR_CORPUS_00494,.6 Node 25]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3900 Sent GREYNIR_CORPUS_00494,.6 Node 27]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3899 Sent GREYNIR_CORPUS_00494,.6 Node 26]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3901 Sent GREYNIR_CORPUS_00494,.6 Node 28]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3900 Sent GREYNIR_CORPUS_00494,.6 Node 27]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3902 Sent GREYNIR_CORPUS_00494,.6 Node 29]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3901 Sent GREYNIR_CORPUS_00494,.6 Node 28]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3905 Sent GREYNIR_CORPUS_00494,.6 Node 32]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 3904 Sent GREYNIR_CORPUS_00494,.6 Node 31]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+...suppressing further errors regarding Warning
+Warnings: 206
 *** PASSED ***
 Validity: 1
 (weight=0.0769230769230769) * (score{features}=0.8) = 0.0615384615384615
