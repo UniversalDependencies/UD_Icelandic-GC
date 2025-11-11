@@ -28,6 +28,7 @@ This project was funded by the Language Technology Programme for Icelandic 2019-
 Data available since: UD v2.11
 License: CC BY-SA 4.0
 Includes text: yes
+Parallel: no
 Genre: news government
 Lemmas: manual native
 UPOS: converted from manual
