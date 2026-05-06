@@ -1,11 +1,11 @@
 Running the following version of UD tools:
-commit 26e6c87a2f518322d15901a351199b6be6569062
+commit b39dc4111bb13658bc0c204b48bb78b492e45d2b
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
-Date:   Fri Nov 7 15:39:58 2025 +0100
+Date:   Tue May 5 17:01:41 2026 +0200
 Evaluating the following revision of UD_Icelandic-GC:
-commit b21ae505e594148d0804954568d13a275d56ff15
-Merge: 8588856 831f0c0
+commit 3d46ebb330c43219af478f48ec2e458871a8310c
 Author: Dan Zeman <zeman@ufal.mff.cuni.cz>
+Date:   Tue Nov 11 19:43:39 2025 +0100
 CoNLL-U data file regular expression = '(.+)-ud-(train|dev|test)\.conllu'
 Language-treebank code (from CoNLL-U file name) = 'is_gc'
 Language code (from CoNLL-U file name) = 'is'
@@ -25,70 +25,118 @@ Universal relations: 29 out of 37 found in the corpus.
 Universal relations: source of annotation (from README) factor is 0.8.
 Genres: found 2 out of 18 known.
 /net/work/people/zeman/unidep/tools/validate.py --lang is --max-err=10 UD_Icelandic-GC/is_gc-ud-dev.conllu
-[Line 8 Sent GREYNIR_CORPUS_00039,.1]: [L3 Warning obl-should-be-nmod] The parent (node [4] 'verkum') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 36 Sent GREYNIR_CORPUS_00039,.3]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
-[Line 35 Sent GREYNIR_CORPUS_00039,.3]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
-[Line 37 Sent GREYNIR_CORPUS_00039,.3]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
-[Line 36 Sent GREYNIR_CORPUS_00039,.3]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
-[Line 38 Sent GREYNIR_CORPUS_00039,.3]: [L3 Warning flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
-[Line 36 Sent GREYNIR_CORPUS_00039,.3]: [L3 Warning flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
-[Line 76 Sent GREYNIR_CORPUS_00039,.6]: [L3 Warning obl-should-be-nmod] The parent (node [1] 'Mætingin') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 108 Sent GREYNIR_CORPUS_00039,.8]: [L3 Warning obl-should-be-nmod] The parent (node [9] 'met') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 124 Sent GREYNIR_CORPUS_00039,.9]: [L3 Warning obl-should-be-nmod] The parent (node [8] 'sigur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-...suppressing further errors regarding Warning
-[Line 5175 Sent GREYNIR_CORPUS_00490,.6]: [L3 Syntax too-many-objects] Multiple direct objects [5, 13] ('samlegðaráhrif', 'sameinað') under the predicate 'sjáum'.
-[Line 6961 Sent GREYNIR_CORPUS_00500,.8]: [L3 Syntax too-many-objects] Multiple direct objects [44, 51] ('gagn', 'jafnvel') under the predicate 'tekið'.
-[Line 9641 Sent GREYNIR_CORPUS_00440,.4]: [L3 Syntax too-many-objects] Multiple direct objects [10, 16] ('leið', 'var') under the predicate 'sé'.
-Syntax errors: 3
-Warnings: 1038
-*** FAILED *** with 3 errors
+[Line 8 Sent GREYNIR_CORPUS_00039,.1]: [L3 SYNTAX obl-should-be-nmod] The parent (node [4] 'verkum') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 36 Sent GREYNIR_CORPUS_00039,.3]: [L3 WARNING flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 35 Sent GREYNIR_CORPUS_00039,.3]: [L3 WARNING flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 37 Sent GREYNIR_CORPUS_00039,.3]: [L3 WARNING flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 36 Sent GREYNIR_CORPUS_00039,.3]: [L3 WARNING flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 38 Sent GREYNIR_CORPUS_00039,.3]: [L3 WARNING flat-foreign-upos-feats] The child of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 36 Sent GREYNIR_CORPUS_00039,.3]: [L3 WARNING flat-foreign-upos-feats] The parent of a flat:foreign relation should have UPOS X and Foreign=Yes (but no other features).
+[Line 76 Sent GREYNIR_CORPUS_00039,.6]: [L3 SYNTAX obl-should-be-nmod] The parent (node [1] 'Mætingin') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 108 Sent GREYNIR_CORPUS_00039,.8]: [L3 SYNTAX obl-should-be-nmod] The parent (node [9] 'met') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 124 Sent GREYNIR_CORPUS_00039,.9]: [L3 SYNTAX obl-should-be-nmod] The parent (node [8] 'sigur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 130 Sent GREYNIR_CORPUS_00039,.10]: [L3 WARNING pron-det-without-prontype] The word 'þessu' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 171 Sent GREYNIR_CORPUS_00290,.2]: [L3 WARNING pron-det-without-prontype] The word 'einu' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 174 Sent GREYNIR_CORPUS_00290,.2]: [L3 WARNING pron-det-without-prontype] The word 'því' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 176 Sent GREYNIR_CORPUS_00290,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [5] 'frákasti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 179 Sent GREYNIR_CORPUS_00290,.2]: [L3 WARNING pron-det-without-prontype] The word 'flestar' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 181 Sent GREYNIR_CORPUS_00290,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [10] 'metið') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 183 Sent GREYNIR_CORPUS_00290,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [14] 'tvennur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 202 Sent GREYNIR_CORPUS_00290,.3]: [L3 SYNTAX obl-should-be-nmod] The parent (node [9] 'Sveinung') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 210 Sent GREYNIR_CORPUS_00290,.3]: [L3 SYNTAX obl-should-be-nmod] The parent (node [18] 'sæti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 232 Sent GREYNIR_CORPUS_00290,.4]: [L3 WARNING fixed-without-extpos] Fixed expression 'í raun og veru' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/MORPHO
+[Line 283 Sent GREYNIR_CORPUS_00290,.6]: [L3 SYNTAX obl-should-be-nmod] The parent (node [16] 'fréttastofu') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+...suppressing further messages regarding ERROR/SYNTAX
+[Line 541 Sent GREYNIR_CORPUS_00390,.9]: [L3 WARNING fixed-without-extpos] Fixed expression 'svo gott sem' does not have the 'ExtPos' feature
+[Line 620 Sent GREYNIR_CORPUS_00160,.2]: [L3 WARNING fixed-without-extpos] Fixed expression 'eins og áður segir' does not have the 'ExtPos' feature
+[Line 714 Sent GREYNIR_CORPUS_00160,.5]: [L3 WARNING fixed-without-extpos] Fixed expression 'hverju sinni' does not have the 'ExtPos' feature
+[Line 967 Sent GREYNIR_CORPUS_00060,.7]: [L3 WARNING fixed-without-extpos] Fixed expression 'ofan í' does not have the 'ExtPos' feature
+[Line 996 Sent GREYNIR_CORPUS_00060,.9]: [L3 WARNING fixed-without-extpos] Fixed expression 'hins vegar' does not have the 'ExtPos' feature
+[Line 1031 Sent GREYNIR_CORPUS_00420,.1]: [L3 WARNING fixed-without-extpos] Fixed expression 'að undanförnu' does not have the 'ExtPos' feature
+[Line 1055 Sent GREYNIR_CORPUS_00420,.2]: [L3 WARNING fixed-without-extpos] Fixed expression 'að ef' does not have the 'ExtPos' feature
+[Line 1164 Sent GREYNIR_CORPUS_00420,.7]: [L3 WARNING fixed-without-extpos] Fixed expression 'í gegnum' does not have the 'ExtPos' feature
+[Line 1173 Sent GREYNIR_CORPUS_00420,.7]: [L3 WARNING fixed-without-extpos] Fixed expression 'upp úr' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+Warnings: 550
+SYNTAX errors: 488
+*** FAILED *** with 488 errors
 Exit code: 1
 /net/work/people/zeman/unidep/tools/validate.py --lang is --max-err=10 UD_Icelandic-GC/is_gc-ud-test.conllu
-[Line 19 Sent GREYNIR_CORPUS_00103,.1]: [L3 Warning pron-det-without-prontype] The word 'þessum' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 36 Sent GREYNIR_CORPUS_00103,.2]: [L3 Warning obl-should-be-nmod] The parent (node [11] 'móti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 50 Sent GREYNIR_CORPUS_00103,.3]: [L3 Warning pron-det-without-prontype] The word 'allt' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 52 Sent GREYNIR_CORPUS_00103,.3]: [L3 Warning fixed-without-extpos] Fixed expression 'á ný' does not have the 'ExtPos' feature
-[Line 113 Sent GREYNIR_CORPUS_00103,.6]: [L3 Warning obl-should-be-nmod] The parent (node [6] 'sóknarbolti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 132 Sent GREYNIR_CORPUS_00103,.7]: [L3 Warning obl-should-be-nmod] The parent (node [5] 'stuðningi') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 141 Sent GREYNIR_CORPUS_00103,.7]: [L3 Warning pron-det-without-prontype] The word 'sína' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 159 Sent GREYNIR_CORPUS_00103,.8]: [L3 Warning obl-should-be-nmod] The parent (node [11] 'umbætur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 180 Sent GREYNIR_CORPUS_00103,.9]: [L3 Warning pron-det-without-prontype] The word 'því' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 181 Sent GREYNIR_CORPUS_00103,.9]: [L3 Warning obl-should-be-nmod] The parent (node [10] 'leikarinn') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-...suppressing further errors regarding Warning
-[Line 2722 Sent GREYNIR_CORPUS_00306,.1]: [L3 Syntax too-many-objects] Multiple direct objects [9, 18] ('andstöðu', 'efasemdum') under the predicate 'lýst'.
-[Line 4373 Sent GREYNIR_CORPUS_00482,.1]: [L3 Syntax too-many-objects] Multiple direct objects [10, 20] ('stein', 'viðarplötu') under the predicate 'velja'.
-[Line 6716 Sent GREYNIR_CORPUS_00149,.8]: [L3 Syntax rel-upos-case] 'case' should not be 'PRON' ('allt')
-[Line 7708 Sent GREYNIR_CORPUS_00155,.7]: [L3 Syntax too-many-objects] Multiple direct objects [2, 6] ('lögreglunni', 'viðvart') under the predicate 'gert'.
-Syntax errors: 4
-Warnings: 930
-*** FAILED *** with 4 errors
+[Line 19 Sent GREYNIR_CORPUS_00103,.1]: [L3 WARNING pron-det-without-prontype] The word 'þessum' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 36 Sent GREYNIR_CORPUS_00103,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [11] 'móti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 50 Sent GREYNIR_CORPUS_00103,.3]: [L3 WARNING pron-det-without-prontype] The word 'allt' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 52 Sent GREYNIR_CORPUS_00103,.3]: [L3 WARNING fixed-without-extpos] Fixed expression 'á ný' does not have the 'ExtPos' feature
+[Line 113 Sent GREYNIR_CORPUS_00103,.6]: [L3 SYNTAX obl-should-be-nmod] The parent (node [6] 'sóknarbolti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 132 Sent GREYNIR_CORPUS_00103,.7]: [L3 SYNTAX obl-should-be-nmod] The parent (node [5] 'stuðningi') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 141 Sent GREYNIR_CORPUS_00103,.7]: [L3 WARNING pron-det-without-prontype] The word 'sína' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 159 Sent GREYNIR_CORPUS_00103,.8]: [L3 SYNTAX obl-should-be-nmod] The parent (node [11] 'umbætur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 180 Sent GREYNIR_CORPUS_00103,.9]: [L3 WARNING pron-det-without-prontype] The word 'því' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 232 Sent GREYNIR_CORPUS_00072,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [2] 'samverustundir') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 299 Sent GREYNIR_CORPUS_00072,.6]: [L3 WARNING pron-det-without-prontype] The word 'þetta' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 299 Sent GREYNIR_CORPUS_00072,.6]: [L3 SYNTAX obl-should-be-nmod] The parent (node [2] 'ákvörðun') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 306 Sent GREYNIR_CORPUS_00072,.6]: [L3 SYNTAX obl-should-be-nmod] The parent (node [8] 'leiðtogafundi') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 352 Sent GREYNIR_CORPUS_00072,.9]: [L3 SYNTAX obl-should-be-nmod] The parent (node [2] 'samtali') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 388 Sent GREYNIR_CORPUS_00172,.1]: [L3 SYNTAX obl-should-be-nmod] The parent (node [1] 'Huw') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 395 Sent GREYNIR_CORPUS_00172,.1]: [L3 SYNTAX obl-should-be-nmod] The parent (node [8] 'áhuga') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 399 Sent GREYNIR_CORPUS_00172,.1]: [L3 WARNING fixed-without-extpos] Fixed expression 'á meðan' does not have the 'ExtPos' feature
+[Line 418 Sent GREYNIR_CORPUS_00172,.2]: [L3 WARNING pron-det-without-prontype] The word 'þessari' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 421 Sent GREYNIR_CORPUS_00172,.2]: [L3 WARNING pron-det-without-prontype] The word 'öll' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 429 Sent GREYNIR_CORPUS_00172,.2]: [L3 WARNING pron-det-without-prontype] The word 'allt' is tagged 'PRON' but it lacks the 'PronType' feature
+...suppressing further messages regarding ERROR/SYNTAX
+[Line 433 Sent GREYNIR_CORPUS_00172,.2]: [L3 WARNING fixed-without-extpos] Fixed expression 'í gegnum' does not have the 'ExtPos' feature
+[Line 456 Sent GREYNIR_CORPUS_00172,.3]: [L3 WARNING fixed-without-extpos] Fixed expression 'í gærkvöld' does not have the 'ExtPos' feature
+[Line 472 Sent GREYNIR_CORPUS_00172,.3]: [L3 WARNING pron-det-without-prontype] The word 'þess' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 489 Sent GREYNIR_CORPUS_00172,.4]: [L3 WARNING pron-det-without-prontype] The word 'einhverjir' is tagged 'PRON' but it lacks the 'PronType' feature
+...suppressing further messages regarding WARNING/MORPHO
+[Line 501 Sent GREYNIR_CORPUS_00172,.4]: [L3 WARNING fixed-without-extpos] Fixed expression 'þrátt fyrir' does not have the 'ExtPos' feature
+[Line 642 Sent GREYNIR_CORPUS_00172,.9]: [L3 WARNING fixed-without-extpos] Fixed expression 'hins vegar' does not have the 'ExtPos' feature
+[Line 767 Sent GREYNIR_CORPUS_00359,.5]: [L3 WARNING fixed-without-extpos] Fixed expression 'í gærkvöldi' does not have the 'ExtPos' feature
+[Line 868 Sent GREYNIR_CORPUS_00261,.2]: [L3 WARNING fixed-without-extpos] Fixed expression 'Á meðal' does not have the 'ExtPos' feature
+[Line 875 Sent GREYNIR_CORPUS_00261,.2]: [L3 WARNING fixed-without-extpos] Fixed expression 'á sama tíma' does not have the 'ExtPos' feature
+[Line 930 Sent GREYNIR_CORPUS_00261,.5]: [L3 WARNING fixed-without-extpos] Fixed expression 'í morgun' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+Warnings: 501
+SYNTAX errors: 430
+*** FAILED *** with 430 errors
 Exit code: 1
 /net/work/people/zeman/unidep/tools/validate.py --lang is --max-err=10 UD_Icelandic-GC/is_gc-ud-train.conllu
-[Line 3 Sent GREYNIR_CORPUS_00044,.1]: [L3 Warning pron-det-without-prontype] The word 'Sá' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 19 Sent GREYNIR_CORPUS_00044,.2]: [L3 Warning obl-should-be-nmod] The parent (node [1] 'Tökur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 40 Sent GREYNIR_CORPUS_00044,.3]: [L3 Warning obl-should-be-nmod] The parent (node [7] 'veganesti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 51 Sent GREYNIR_CORPUS_00044,.4]: [L3 Warning obl-should-be-nmod] The parent (node [5] 'urmul') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 54 Sent GREYNIR_CORPUS_00044,.4]: [L3 Warning obl-should-be-nmod] The parent (node [5] 'urmul') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 78 Sent GREYNIR_CORPUS_00044,.6]: [L3 Warning pron-det-without-prontype] The word 'þetta' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 82 Sent GREYNIR_CORPUS_00044,.6]: [L3 Warning obl-should-be-nmod] The parent (node [8] 'samtali') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 109 Sent GREYNIR_CORPUS_00044,.8]: [L3 Warning pron-det-without-prontype] The word 'sínum' is tagged 'PRON' but it lacks the 'PronType' feature
-[Line 121 Sent GREYNIR_CORPUS_00044,.9]: [L3 Warning obl-should-be-nmod] The parent (node [6] 'fangageymslu') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
-[Line 152 Sent GREYNIR_CORPUS_00144,.1]: [L3 Warning pron-det-without-prontype] The word 'því' is tagged 'PRON' but it lacks the 'PronType' feature
-...suppressing further errors regarding Warning
-[Line 8106 Sent GREYNIR_CORPUS_00336,.10]: [L3 Syntax too-many-objects] Multiple direct objects [16, 23] ('Jon', 'bréf') under the predicate 'skrifað'.
-[Line 23584 Sent GREYNIR_CORPUS_00402,.9]: [L3 Syntax too-many-objects] Multiple direct objects [10, 13] ('henni', 'íbúðarhús') under the predicate 'fylgja'.
-[Line 24960 Sent GREYNIR_CORPUS_00322,.9]: [L3 Syntax too-many-objects] Multiple direct objects [8, 10] ('ekki', 'því') under the predicate 'leggist'.
-[Line 34310 Sent GREYNIR_CORPUS_00168,.8]: [L3 Syntax too-many-objects] Multiple direct objects [3, 15] ('sér', 'ráðstefnugesti') under the predicate 'brá'.
-[Line 37820 Sent GREYNIR_CORPUS_00243,.1]: [L3 Syntax too-many-objects] Multiple direct objects [5, 10] ('þumal', 'honum') under the predicate 'braut'.
-[Line 43384 Sent GREYNIR_CORPUS_00216,.8]: [L3 Syntax too-many-objects] Multiple direct objects [3, 6] ('afsagnar', 'rannsóknar') under the predicate 'Krefjast'.
-[Line 54212 Sent GREYNIR_CORPUS_00291,.8]: [L3 Syntax too-many-objects] Multiple direct objects [12, 14] ('athugasemdir', 'ummæli') under the predicate 'fjarlægja'.
-[Line 56032 Sent GREYNIR_CORPUS_00171,.4]: [L3 Syntax too-many-objects] Multiple direct objects [9, 14] ('gefa', 'ráð') under the predicate 'langar'.
-[Line 56159 Sent GREYNIR_CORPUS_00171,.8]: [L3 Syntax too-many-objects] Multiple direct objects [3, 9, 12] ('tvo', 'form', 'loftsteinabrot') under the predicate 'lögðu'.
-[Line 56697 Sent GREYNIR_CORPUS_00071,.1]: [L3 Syntax too-many-objects] Multiple direct objects [9, 13] ('vernd', 'aðhald') under the predicate 'veitir'.
-...suppressing further errors regarding Syntax
-Syntax errors: 14
-Warnings: 7685
-*** FAILED *** with 14 errors
+[Line 3 Sent GREYNIR_CORPUS_00044,.1]: [L3 WARNING pron-det-without-prontype] The word 'Sá' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 19 Sent GREYNIR_CORPUS_00044,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [1] 'Tökur') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 40 Sent GREYNIR_CORPUS_00044,.3]: [L3 SYNTAX obl-should-be-nmod] The parent (node [7] 'veganesti') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 51 Sent GREYNIR_CORPUS_00044,.4]: [L3 SYNTAX obl-should-be-nmod] The parent (node [5] 'urmul') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 54 Sent GREYNIR_CORPUS_00044,.4]: [L3 SYNTAX obl-should-be-nmod] The parent (node [5] 'urmul') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 78 Sent GREYNIR_CORPUS_00044,.6]: [L3 WARNING pron-det-without-prontype] The word 'þetta' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 82 Sent GREYNIR_CORPUS_00044,.6]: [L3 SYNTAX obl-should-be-nmod] The parent (node [8] 'samtali') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 109 Sent GREYNIR_CORPUS_00044,.8]: [L3 WARNING pron-det-without-prontype] The word 'sínum' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 121 Sent GREYNIR_CORPUS_00044,.9]: [L3 SYNTAX obl-should-be-nmod] The parent (node [6] 'fangageymslu') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 152 Sent GREYNIR_CORPUS_00144,.1]: [L3 WARNING pron-det-without-prontype] The word 'því' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 175 Sent GREYNIR_CORPUS_00144,.2]: [L3 SYNTAX obl-should-be-nmod] The parent (node [4] 'Barack') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 210 Sent GREYNIR_CORPUS_00144,.3]: [L3 SYNTAX obl-should-be-nmod] The parent (node [13] 'sprett') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 211 Sent GREYNIR_CORPUS_00144,.3]: [L3 WARNING pron-det-without-prontype] The word 'nokkru' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 218 Sent GREYNIR_CORPUS_00144,.3]: [L3 SYNTAX obl-should-be-nmod] The parent (node [20] 'sting') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 235 Sent GREYNIR_CORPUS_00144,.4]: [L3 SYNTAX obl-should-be-nmod] The parent (node [11] 'pökkum') is a nominal (and not a predicate), hence the relation should be 'nmod', not 'obl'.
+[Line 242 Sent GREYNIR_CORPUS_00144,.4]: [L3 WARNING pron-det-without-prontype] The word 'hvað' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 250 Sent GREYNIR_CORPUS_00144,.5]: [L3 WARNING pron-det-without-prontype] The word 'Það' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 279 Sent GREYNIR_CORPUS_00144,.6]: [L3 WARNING fixed-without-extpos] Fixed expression 'fyrst og fremst' does not have the 'ExtPos' feature
+...suppressing further messages regarding ERROR/SYNTAX
+[Line 311 Sent GREYNIR_CORPUS_00144,.7]: [L3 WARNING pron-det-without-prontype] The word 'sumir' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 316 Sent GREYNIR_CORPUS_00144,.7]: [L3 WARNING pron-det-without-prontype] The word 'hverjir' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 317 Sent GREYNIR_CORPUS_00144,.7]: [L3 WARNING pron-det-without-prontype] The word 'öllu' is tagged 'PRON' but it lacks the 'PronType' feature
+[Line 365 Sent GREYNIR_CORPUS_00144,.9]: [L3 WARNING fixed-without-extpos] Fixed expression 'í gær' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/MORPHO
+[Line 400 Sent GREYNIR_CORPUS_00144,.10]: [L3 WARNING fixed-without-extpos] Fixed expression 'til þess' does not have the 'ExtPos' feature
+[Line 497 Sent GREYNIR_CORPUS_00139,.4]: [L3 WARNING fixed-without-extpos] Fixed expression 'að þegar' does not have the 'ExtPos' feature
+[Line 522 Sent GREYNIR_CORPUS_00139,.5]: [L3 WARNING fixed-without-extpos] Fixed expression 'að þegar' does not have the 'ExtPos' feature
+[Line 811 Sent GREYNIR_CORPUS_00127,.1]: [L3 WARNING fixed-without-extpos] Fixed expression 'í gær' does not have the 'ExtPos' feature
+[Line 975 Sent GREYNIR_CORPUS_00127,.8]: [L3 WARNING fixed-without-extpos] Fixed expression 'meðal annars' does not have the 'ExtPos' feature
+[Line 1017 Sent GREYNIR_CORPUS_00127,.10]: [L3 WARNING fixed-without-extpos] Fixed expression 'í morgun' does not have the 'ExtPos' feature
+[Line 1078 Sent GREYNIR_CORPUS_00156,.2]: [L3 WARNING fixed-without-extpos] Fixed expression 'til dæmis' does not have the 'ExtPos' feature
+[Line 1177 Sent GREYNIR_CORPUS_00156,.5]: [L3 WARNING fixed-without-extpos] Fixed expression 'fyrir innan' does not have the 'ExtPos' feature
+...suppressing further messages regarding WARNING/SYNTAX
+Warnings: 4056
+SYNTAX errors: 3618
+*** FAILED *** with 3618 errors
 Exit code: 1
 Validity: 0.01
 (weight=0.111111111111111) * (score{features}=0.8) = 0.0888888888888889
